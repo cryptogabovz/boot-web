@@ -28,34 +28,15 @@ export default function About() {
           </div>
           
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 uppercase font-[Montserrat] mb-6">Fabricantes Directos, <span className="text-accent-blue">Impacto Local</span></h2>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              En Boots Solution no somos simples revendedores. <strong className="text-gray-900">Somos fabricantes directos</strong> de calzado e indumentaria de seguridad de alta resistencia. Controlamos cada hilo, cada suela y cada costura en nuestras líneas de producción.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 uppercase font-[Montserrat] mb-6">Nuestra <span className="text-accent-blue">Misión</span></h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Nuestro gran objetivo y orgullo es <strong>traer directamente a Venezuela</strong> los mismos productos de clase mundial que distribuimos internacionalmente, garantizando que el trabajador venezolano cuente con tecnología, protección certificada y la máxima calidad sin pagar de más por intermediarios.
+              Nacidos de la tradición manufacturera en Maracaibo en 2005, en <strong>Boots Solution</strong> nos dedicamos a diseñar, fabricar y proveer calzado de seguridad y soluciones de dotación industrial de la más alta resistencia. Conectamos nuestra experiencia de origen con una plataforma logística global desde Miami, protegiendo la integridad de los trabajadores en toda Venezuela y Latinoamérica a través de canales de distribución tradicionales y de comercio electrónico de vanguardia.
             </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-blue-50 text-accent-blue rounded-lg">
-                  <Factory className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 uppercase text-sm mb-1">Cero Intermediarios</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">De la línea de ensamblaje a tu proyecto, asegurando el mejor precio.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-green-50 text-accent-green rounded-lg">
-                  <Globe className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 uppercase text-sm mb-1">Presencia en Venezuela</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">Importación directa para abastecer el mercado nacional con stock inmediato.</p>
-                </div>
-              </div>
-            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 uppercase font-[Montserrat] mb-6">Nuestra <span className="text-accent-green">Visión</span></h2>
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              Consolidarnos como el referente panamericano líder en seguridad industrial y comercio electrónico especializado, expandiendo nuestra presencia desde Estados Unidos hacia toda la región. Nos proyectamos como una potencia omnicanal que redefine la distribución de equipos de protección personal a través de plataformas como Amazon, Walmart e eBay, fusionando la innovación tecnológica con la máxima calidad para llevar protección de primer nivel a cada rincón de las Américas.
+            </p>
           </div>
         </div>
       </section>

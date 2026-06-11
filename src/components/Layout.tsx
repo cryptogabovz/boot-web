@@ -88,7 +88,7 @@ export default function Layout() {
             <img 
               src="/img/LOGO-BOOST-SOLUTION-0-2048x830 (2).png" 
               alt="Boots Solution Logo" 
-              className="h-10 md:h-12 object-contain self-start grayscale hover:grayscale-0 transition-all"
+              className="h-7 md:h-9 object-contain self-start grayscale hover:grayscale-0 transition-all"
               style={{ filter: 'brightness(0) invert(1)' }}
             />
             <p className="text-sm text-gray-400 max-w-md">
