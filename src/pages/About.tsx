@@ -20,7 +20,19 @@ export default function About() {
           <div className="relative">
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-50 rounded-full -z-10"></div>
             <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-green-50 rounded-full -z-10"></div>
-            <img src="/img/botas seguridad.png" alt="Producción de Calzado Boots Solution" className="w-full object-contain rounded-2xl drop-shadow-2xl bg-gray-50 p-8 border border-gray-100" />
+            <div className="grid grid-cols-2 gap-4 h-[400px] sm:h-[500px]">
+              <div className="h-full w-full rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-gray-100">
+                <img src="/img/fabrica/fabrica botas boot solution vertical.png" alt="Instalaciones de fábrica" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
+              <div className="space-y-4 h-full flex flex-col">
+                <div className="h-[50%] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-100">
+                  <img src="/img/fabrica/botas boot solutions cuadrada.png" alt="Proceso de fabricación" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                </div>
+                <div className="h-[50%] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-100">
+                  <img src="/img/fabrica/fabrica boot.jpeg" alt="Detalle de inyección" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                </div>
+              </div>
+            </div>
             <div className="absolute -right-8 top-1/2 -translate-y-1/2 glass-panel bg-white/90 backdrop-blur border border-gray-100 p-6 rounded-2xl shadow-xl hidden md:block">
               <h4 className="text-4xl font-bold text-accent-blue mb-1 font-[Montserrat]">+15</h4>
               <p className="text-xs uppercase tracking-widest text-gray-500">Años Fabricando</p>
@@ -42,8 +54,17 @@ export default function About() {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-20 bg-gray-50 border-y border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 md:px-16 text-center">
+      <section className="py-20 relative border-y border-gray-200 overflow-hidden">
+        {/* Fondo de fábrica sutil */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/img/fabrica/fabrica botas boot solution horizontal-1.png" 
+            alt="Fondo de Fábrica" 
+            className="w-full h-full object-cover opacity-5"
+          />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 md:px-16 text-center relative z-10">
           <h2 className="text-2xl font-bold text-gray-900 uppercase tracking-widest mb-12">Nuestros Pilares de Calidad</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center">
