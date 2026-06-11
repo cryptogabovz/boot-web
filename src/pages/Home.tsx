@@ -1,5 +1,40 @@
 import { Shield, HardHat, Factory, CheckCircle, Truck, Flame, Award, Zap, PackageOpen, CheckCircle2, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+
+function AnimatedCounter({ value, duration = 2000, prefix = "", suffix = "" }: { value: number, duration?: number, prefix?: string, suffix?: string }) {
+  const [count, setCount] = useState(0);
+  const nodeRef = useRef<HTMLSpanElement>(null);
+  
+  useEffect(() => {
+    const node = nodeRef.current;
+    if (!node) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        let startTimestamp: number | null = null;
+        const step = (timestamp: number) => {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          setCount(Math.floor(progress * value));
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            setCount(value);
+          }
+        };
+        window.requestAnimationFrame(step);
+        observer.disconnect();
+      }
+    }, { threshold: 0.1 });
+    
+    observer.observe(node);
+    
+    return () => observer.disconnect();
+  }, [value, duration]);
+  
+  return <span ref={nodeRef}>{prefix}{count}{suffix}</span>;
+}
 
 export default function Home() {
   return (
@@ -433,21 +468,21 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-2 gap-4">
-            <div className="glass-panel bg-white/5 border-white/10 p-6 rounded-2xl text-center transform translate-y-8">
-              <h4 className="text-4xl font-bold text-accent-blue mb-2 font-[Montserrat]">+15 Años</h4>
-              <p className="text-xs uppercase tracking-widest text-gray-400">De Experiencia</p>
+            <div className="glass-panel bg-white/50 backdrop-blur-md border-white/20 p-6 rounded-2xl text-center transform translate-y-8 shadow-xl">
+              <h4 className="text-4xl font-bold text-accent-blue mb-2 font-[Montserrat]"><AnimatedCounter value={15} duration={3000} prefix="+" suffix=" Años" /></h4>
+              <p className="text-xs uppercase font-bold tracking-widest text-gray-800">De Experiencia</p>
             </div>
-            <div className="glass-panel bg-white/5 border-white/10 p-6 rounded-2xl text-center">
-              <h4 className="text-4xl font-bold text-accent-green mb-2 font-[Montserrat]">500k</h4>
-              <p className="text-xs uppercase tracking-widest text-gray-400">Pares Vendidos</p>
+            <div className="glass-panel bg-white/50 backdrop-blur-md border-white/20 p-6 rounded-2xl text-center shadow-xl">
+              <h4 className="text-4xl font-bold text-accent-green mb-2 font-[Montserrat]"><AnimatedCounter value={500} duration={1500} suffix="k" /></h4>
+              <p className="text-xs uppercase font-bold tracking-widest text-gray-800">Pares Vendidos</p>
             </div>
-            <div className="glass-panel bg-white/5 border-white/10 p-6 rounded-2xl text-center transform translate-y-8">
-              <h4 className="text-4xl font-bold text-white mb-2 font-[Montserrat]">100%</h4>
-              <p className="text-xs uppercase tracking-widest text-gray-400">Conformidad ISO</p>
+            <div className="glass-panel bg-white/50 backdrop-blur-md border-white/20 p-6 rounded-2xl text-center transform translate-y-8 shadow-xl">
+              <h4 className="text-4xl font-bold text-accent-blue mb-2 font-[Montserrat]"><AnimatedCounter value={100} duration={2500} suffix="%" /></h4>
+              <p className="text-xs uppercase font-bold tracking-widest text-gray-800">Conformidad ISO</p>
             </div>
-            <div className="glass-panel bg-white/5 border-white/10 p-6 rounded-2xl text-center">
-              <h4 className="text-4xl font-bold text-accent-blue mb-2 font-[Montserrat]">24/7</h4>
-              <p className="text-xs uppercase tracking-widest text-gray-400">Soporte Industrial</p>
+            <div className="glass-panel bg-white/50 backdrop-blur-md border-white/20 p-6 rounded-2xl text-center shadow-xl">
+              <h4 className="text-4xl font-bold text-accent-green mb-2 font-[Montserrat]"><AnimatedCounter value={24} duration={3000} suffix="/7" /></h4>
+              <p className="text-xs uppercase font-bold tracking-widest text-gray-800">Soporte Industrial</p>
             </div>
           </div>
         </div>
