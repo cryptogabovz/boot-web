@@ -9,19 +9,21 @@ export default function Home() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
           {/* Texto Hero */}
           <div className="flex flex-col items-center text-center md:items-start md:text-left gap-4 md:gap-8 max-w-2xl order-2 md:order-1">
-            <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-900 tracking-tight leading-tight uppercase font-[Montserrat]">
-              Fabricantes de Equipos de <br/>
-              <span className="text-accent-blue">Seguridad Industrial</span>
+            <h1 className="font-bold text-[30px] leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl text-gray-900 tracking-tight uppercase font-[Montserrat]">
+              Fabricantes de <br className="block md:hidden" />
+              Equipos de <br className="hidden md:block" />
+              <span className="text-accent-blue">Seguridad</span> <br className="block md:hidden" />
+              <span className="text-accent-blue">Industrial</span>
             </h1>
-            <p className="text-sm md:text-lg text-gray-600 max-w-lg">
+            <p className="text-sm md:text-lg text-gray-600 max-w-lg mt-2">
               Fabricantes e Importadores de Calzado e Indumentaria de Alta Resistencia. Diseñados para profesionales que exigen el máximo rendimiento.
             </p>
-            <div className="flex flex-wrap gap-4 mt-2 justify-center md:justify-start">
-              <Link to="/productos" className="bg-accent-blue text-white hover:bg-blue-700 font-semibold text-sm uppercase px-6 py-3 md:px-8 md:py-4 rounded transition-all duration-300 shadow-lg shadow-accent-blue/30 flex items-center gap-2">
+            <div className="grid grid-cols-2 gap-2 mt-4 w-full max-w-[380px] md:max-w-none md:flex md:flex-row md:gap-4 md:justify-start">
+              <Link to="/productos" className="bg-accent-blue text-white hover:bg-blue-700 font-semibold text-[11px] sm:text-xs md:text-sm uppercase px-1 py-3 md:px-8 md:py-4 rounded transition-all duration-300 shadow-lg shadow-accent-blue/30 flex items-center justify-center text-center leading-tight">
                 Ver Catálogo
               </Link>
-              <Link to="/contacto" className="bg-accent-green text-white hover:bg-green-700 font-semibold text-sm uppercase px-6 py-3 md:px-8 md:py-4 rounded transition-all duration-300 shadow-lg shadow-accent-green/30 flex items-center gap-2">
-                Solicitar Cotización
+              <Link to="/contacto" className="bg-accent-green text-white hover:bg-green-700 font-semibold text-[11px] sm:text-xs md:text-sm uppercase px-1 py-3 md:px-8 md:py-4 rounded transition-all duration-300 shadow-lg shadow-accent-green/30 flex items-center justify-center text-center leading-tight">
+                Cotizar Ahora
               </Link>
             </div>
           </div>
