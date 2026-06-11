@@ -1,13 +1,16 @@
+import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Layout() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
-    <div className="flex flex-col min-h-screen">
-      <nav className="glass-panel sticky top-0 z-50 border-b border-gray-100">
+    <div className="flex flex-col min-h-screen relative">
+      <nav className="glass-panel sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-md">
         <div className="flex justify-between items-center px-4 md:px-16 py-4 w-full max-w-7xl mx-auto">
           <div className="flex items-center gap-4">
-            <Link to="/">
+            <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
               <img 
                 src="/img/LOGO-BOOST-SOLUTION-0-2048x830 (2).png" 
                 alt="Boots Solution Logo" 
@@ -24,10 +27,55 @@ export default function Layout() {
           <Link to="/contacto" className="hidden md:block bg-transparent border border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-white font-semibold text-sm uppercase px-6 py-3 rounded transition-all duration-300">
             Solicitar Cotización
           </Link>
-          <button className="md:hidden text-accent-blue">
-            <Menu className="w-8 h-8" />
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden text-accent-blue focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            {isMobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
           </button>
         </div>
+
+        {/* Mobile Dropdown Menu */}
+        {isMobileMenuOpen && (
+          <div className="absolute top-full left-0 w-full bg-white border-b border-gray-200 shadow-xl flex flex-col p-6 gap-4 z-40 transition-all duration-300 md:hidden">
+            <Link 
+              to="/productos" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-gray-600 hover:text-accent-blue font-semibold uppercase tracking-widest text-xs py-3 border-b border-gray-100 transition-colors"
+            >
+              Productos
+            </Link>
+            <Link 
+              to="/nosotros" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-gray-600 hover:text-accent-blue font-semibold uppercase tracking-widest text-xs py-3 border-b border-gray-100 transition-colors"
+            >
+              Nosotros
+            </Link>
+            <Link 
+              to="/ubicaciones" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-gray-600 hover:text-accent-blue font-semibold uppercase tracking-widest text-xs py-3 border-b border-gray-100 transition-colors"
+            >
+              Ubicaciones
+            </Link>
+            <Link 
+              to="/contacto" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-gray-600 hover:text-accent-blue font-semibold uppercase tracking-widest text-xs py-3 border-b border-gray-100 transition-colors"
+            >
+              Contacto
+            </Link>
+            <Link 
+              to="/contacto" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-full text-center bg-accent-blue text-white font-semibold text-xs uppercase py-4 rounded transition-colors mt-2"
+            >
+              Solicitar Cotización
+            </Link>
+          </div>
+        )}
       </nav>
 
       <main className="flex-grow">
