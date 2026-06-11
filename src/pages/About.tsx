@@ -1,4 +1,4 @@
-import { Shield, Factory, Globe, Award } from 'lucide-react';
+import { Shield, Factory, Award } from 'lucide-react';
 
 export default function About() {
   return (
