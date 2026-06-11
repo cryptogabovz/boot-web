@@ -174,6 +174,82 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Somos Fabricantes Section */}
+      <section className="py-24 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 md:px-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Texto */}
+            <div>
+              <span className="text-accent-blue font-bold tracking-widest uppercase text-sm mb-2 block">De la Fábrica a tus Manos</span>
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 uppercase tracking-wider font-[Montserrat] mb-8">
+                Somos <span className="text-accent-green">Fabricantes</span>
+              </h2>
+              <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+                En <strong>BOOT SOLUTION</strong>, controlamos el 100% del proceso de producción. No somos solo distribuidores; fabricamos cada par de botas con tecnología de inyección directa y materiales premium para garantizar la máxima protección industrial.
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                Nuestra capacidad instalada nos permite satisfacer demandas a gran escala sin sacrificar el estricto control de calidad que nos caracteriza, cumpliendo holgadamente con las normativas internacionales de seguridad.
+              </p>
+              
+              <ul className="space-y-4">
+                <li className="flex items-start text-gray-700">
+                  <CheckCircle2 className="w-6 h-6 text-accent-green mr-3 shrink-0 mt-0.5" />
+                  <span><strong>Inyección Directa al Corte:</strong> Unión molecular indestructible entre suela y cuero.</span>
+                </li>
+                <li className="flex items-start text-gray-700">
+                  <CheckCircle2 className="w-6 h-6 text-accent-green mr-3 shrink-0 mt-0.5" />
+                  <span><strong>Materiales Premium:</strong> Cueros hidrofugados y punteras certificadas (Acero/Composite).</span>
+                </li>
+                <li className="flex items-start text-gray-700">
+                  <CheckCircle2 className="w-6 h-6 text-accent-green mr-3 shrink-0 mt-0.5" />
+                  <span><strong>Suelas Poliuretano Bi-densidad:</strong> Máximo confort interno y altísima resistencia al desgaste externo.</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Imagenes Collage */}
+            <div className="grid grid-cols-2 gap-4 h-[400px] sm:h-[500px]">
+              <div className="space-y-4 h-full flex flex-col">
+                <div className="h-[60%] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-100">
+                  <img src="/img/fabrica/botas boot solutions cuadrada.png" alt="Proceso de fabricación" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                </div>
+                <div className="h-[40%] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-100">
+                  <img src="/img/fabrica/botas boot solutions horizontal.png" alt="Detalle de inyección" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                </div>
+              </div>
+              <div className="h-full pt-12">
+                <div className="h-full w-full rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-gray-100">
+                  <img src="/img/fabrica/fabrica botas boot solution vertical.png" alt="Instalaciones de fábrica" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fabricantes Directos Parallax/Background Section */}
+      <section className="relative py-32 bg-gray-900 overflow-hidden flex items-center justify-center">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/img/fabrica/fabrica botas boot solution horizontal-1.png" 
+            alt="Fábrica de Botas" 
+            className="w-full h-full object-cover opacity-30 object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-gray-900 opacity-80"></div>
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-16 text-center text-white">
+          <Factory className="w-16 h-16 mx-auto mb-6 text-accent-green opacity-80" />
+          <h2 className="text-3xl md:text-5xl font-bold uppercase mb-6 font-[Montserrat] tracking-wider">La Industria Detrás de tu Seguridad</h2>
+          <p className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed font-light">
+            Tecnología, precisión y resistencia forjadas en cada paso. Desde la selección del cuero hasta la prueba de impacto final.
+          </p>
+          <Link to="/productos" className="btn-primary">
+            Conocer Nuestro Catálogo
+          </Link>
+        </div>
+      </section>
+
       {/* Certificaciones Section */}
       <section className="py-16 bg-gray-50 border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 md:px-16 text-center">
@@ -405,12 +481,21 @@ export default function Home() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 bg-accent-blue text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-bl-full -z-10"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-green opacity-20 rounded-tr-full -z-10 blur-3xl"></div>
+      <section className="relative py-28 overflow-hidden flex items-center justify-center">
+        {/* Imagen de fondo de Botas Amarillas Horizontal */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/img/fabrica/botas boot solutions horizontal.png" 
+            alt="Protección Industrial Boots Solution" 
+            className="w-full h-full object-cover object-center"
+          />
+          {/* Overlay oscuro para garantizar legibilidad del texto blanco */}
+          <div className="absolute inset-0 bg-gray-900/70 backdrop-blur-[2px]"></div>
+        </div>
+
         <div className="max-w-4xl mx-auto px-4 md:px-16 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-bold uppercase font-[Montserrat] mb-6 tracking-tight">Protege el Activo Más Valioso de tu Empresa</h2>
-          <p className="text-lg text-blue-100 mb-10 max-w-2xl mx-auto">Únete a las cientos de empresas industriales que ya confían en la resistencia, durabilidad y tecnología de Boots Solution para sus operaciones diarias.</p>
+          <h2 className="text-3xl md:text-5xl font-bold uppercase font-[Montserrat] mb-6 tracking-tight text-white">Protege el Activo Más Valioso de tu Empresa</h2>
+          <p className="text-lg text-gray-200 mb-10 max-w-2xl mx-auto">Únete a las cientos de empresas industriales que ya confían en la resistencia, durabilidad y tecnología de Boots Solution para sus operaciones diarias.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contacto" className="bg-accent-green text-white hover:bg-green-700 font-bold uppercase tracking-wider px-8 py-4 rounded transition-all shadow-lg shadow-accent-green/30">
               Cotizar Dotación
