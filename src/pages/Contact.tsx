@@ -91,8 +91,8 @@ export default function Contact() {
                 <div className="flex items-start gap-4">
                   <Phone className="w-6 h-6 text-accent-green mt-1" />
                   <div>
-                    <h4 className="font-bold uppercase text-xs tracking-wider mb-1 opacity-80">Línea Ventas</h4>
-                    <p className="text-lg">+1 (305) 555-0198</p>
+                    <h4 className="font-bold uppercase text-xs tracking-wider mb-1 opacity-80">WhatsApp Ventas</h4>
+                    <p className="text-lg">+58 (424) 660-6287</p>
                   </div>
                 </div>
                 

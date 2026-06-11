@@ -44,14 +44,6 @@ export default function Locations() {
                   </div>
                   
                   <div className="flex items-start gap-4">
-                    <Phone className="w-5 h-5 text-accent-blue mt-1 flex-shrink-0" />
-                    <div>
-                      <span className="block font-bold text-gray-900 uppercase text-xs tracking-wider mb-1">Teléfono</span>
-                      <span className="text-gray-600 text-sm">+1 (305) 555-0198</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
                     <Mail className="w-5 h-5 text-accent-blue mt-1 flex-shrink-0" />
                     <div>
                       <span className="block font-bold text-gray-900 uppercase text-xs tracking-wider mb-1">Email Global</span>
@@ -89,8 +81,8 @@ export default function Locations() {
                   <div className="flex items-start gap-4">
                     <Phone className="w-5 h-5 text-accent-green mt-1 flex-shrink-0" />
                     <div>
-                      <span className="block font-bold text-gray-900 uppercase text-xs tracking-wider mb-1">Teléfono Ventas</span>
-                      <span className="text-gray-600 text-sm">+58 (212) 555-0123</span>
+                      <span className="block font-bold text-gray-900 uppercase text-xs tracking-wider mb-1">Teléfono / WhatsApp</span>
+                      <span className="text-gray-600 text-sm">+58 (424) 660-6287</span>
                     </div>
                   </div>
                   

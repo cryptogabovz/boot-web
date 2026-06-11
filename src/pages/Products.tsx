@@ -1,4 +1,4 @@
-import { Wrench, FileText, MessageSquare } from 'lucide-react';
+import { Wrench, MessageSquare } from 'lucide-react';
 
 export default function Products() {
   return (
@@ -19,7 +19,7 @@ export default function Products() {
         </div>
         <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
           <a 
-            href="https://wa.me/584241234567" /* Reemplazar con el WhatsApp real si aplica, o dejar genérico */
+            href="https://wa.me/584246606287"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm uppercase tracking-wider"
@@ -27,13 +27,6 @@ export default function Products() {
             <MessageSquare className="w-4 h-4" />
             Cotizar por WhatsApp
           </a>
-          <button 
-            onClick={() => alert('El catálogo PDF se está generando y estará disponible en breve.')}
-            className="flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm uppercase tracking-wider"
-          >
-            <FileText className="w-4 h-4" />
-            Descargar Catálogo
-          </button>
         </div>
       </div>
 
