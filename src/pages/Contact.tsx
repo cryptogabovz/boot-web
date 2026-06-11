@@ -58,7 +58,7 @@ export default function Contact() {
       if (!response.ok) throw new Error('Error al enviar a GHL');
 
       setStatus('success');
-      setFormData({ name: '', email: '', phone: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', message: '', honey: '' });
     } catch (error) {
       console.error(error);
       setStatus('error');

@@ -1,4 +1,4 @@
-import { Shield, Layers, HardHat, Factory, CheckCircle, Truck, Wrench, Flame, Award, Zap, PackageOpen, CheckCircle2 } from 'lucide-react';
+import { Shield, HardHat, Factory, CheckCircle, Truck, Flame, Award, Zap, PackageOpen, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
