@@ -1,4 +1,4 @@
-import { Shield, HardHat, Factory, CheckCircle, Truck, Flame, Award, Zap, PackageOpen, CheckCircle2 } from 'lucide-react';
+import { Shield, HardHat, Factory, CheckCircle, Truck, Flame, Award, Zap, PackageOpen, CheckCircle2, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -174,47 +174,59 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Botones Estratégicos de Contacto */}
+      <section className="bg-white pb-16">
+        <div className="max-w-7xl mx-auto px-4 md:px-16 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Link to="/nosotros" className="w-full sm:w-auto bg-transparent border-2 border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-white font-bold uppercase tracking-wider px-8 py-4 rounded transition-all text-center">
+            Conoce Más Sobre Nosotros
+          </Link>
+          <a href="https://wa.me/584246606287" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white hover:bg-[#1ebe5d] font-bold uppercase tracking-wider px-8 py-4 rounded transition-all shadow-lg shadow-[#25D366]/30 flex justify-center items-center gap-2">
+            <MessageCircle className="w-5 h-5" /> Chat por WhatsApp
+          </a>
+        </div>
+      </section>
       {/* Somos Fabricantes Section */}
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 md:px-16">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Texto */}
             <div>
-              <span className="text-accent-blue font-bold tracking-widest uppercase text-sm mb-2 block">De la Fábrica a tus Manos</span>
-              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 uppercase tracking-wider font-[Montserrat] mb-8">
+              <span className="text-accent-blue font-bold tracking-widest uppercase text-[10px] md:text-xs mb-2 block">De la Fábrica a tus Manos</span>
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 uppercase tracking-wider font-[Montserrat] mb-6">
                 Somos <span className="text-accent-green">Fabricantes</span>
               </h2>
-              <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+              <p className="text-gray-600 mb-4 text-sm md:text-base leading-relaxed">
                 En <strong>BOOT SOLUTION</strong>, controlamos el 100% del proceso de producción. No somos solo distribuidores; fabricamos cada par de botas con tecnología de inyección directa y materiales premium para garantizar la máxima protección industrial.
               </p>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
                 Nuestra capacidad instalada nos permite satisfacer demandas a gran escala sin sacrificar el estricto control de calidad que nos caracteriza, cumpliendo holgadamente con las normativas internacionales de seguridad.
               </p>
               
-              <ul className="space-y-4">
-                <li className="flex items-start text-gray-700">
-                  <CheckCircle2 className="w-6 h-6 text-accent-green mr-3 shrink-0 mt-0.5" />
+              <ul className="space-y-3">
+                <li className="flex items-start text-gray-700 text-sm md:text-base">
+                  <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-accent-green mr-3 shrink-0 mt-0.5" />
                   <span><strong>Inyección Directa al Corte:</strong> Unión molecular indestructible entre suela y cuero.</span>
                 </li>
-                <li className="flex items-start text-gray-700">
-                  <CheckCircle2 className="w-6 h-6 text-accent-green mr-3 shrink-0 mt-0.5" />
+                <li className="flex items-start text-gray-700 text-sm md:text-base">
+                  <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-accent-green mr-3 shrink-0 mt-0.5" />
                   <span><strong>Materiales Premium:</strong> Cueros hidrofugados y punteras certificadas (Acero/Composite).</span>
                 </li>
-                <li className="flex items-start text-gray-700">
-                  <CheckCircle2 className="w-6 h-6 text-accent-green mr-3 shrink-0 mt-0.5" />
+                <li className="flex items-start text-gray-700 text-sm md:text-base">
+                  <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-accent-green mr-3 shrink-0 mt-0.5" />
                   <span><strong>Suelas Poliuretano Bi-densidad:</strong> Máximo confort interno y altísima resistencia al desgaste externo.</span>
                 </li>
               </ul>
             </div>
 
             {/* Imagenes Collage */}
-            <div className="grid grid-cols-2 gap-4 h-[400px] sm:h-[500px]">
+            <div className="grid grid-cols-2 gap-4 h-[400px] sm:h-[500px] mt-8 lg:mt-0">
               <div className="space-y-4 h-full flex flex-col">
                 <div className="h-[60%] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-100">
                   <img src="/img/fabrica/botas boot solutions cuadrada.png" alt="Proceso de fabricación" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="h-[40%] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-100">
-                  <img src="/img/fabrica/botas boot solutions horizontal.png" alt="Detalle de inyección" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                  <img src="/img/fabrica/fabrica boot.jpeg" alt="Detalle de inyección" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
               </div>
               <div className="h-full pt-12">
@@ -244,9 +256,14 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed font-light">
             Tecnología, precisión y resistencia forjadas en cada paso. Desde la selección del cuero hasta la prueba de impacto final.
           </p>
-          <Link to="/productos" className="btn-primary">
-            Conocer Nuestro Catálogo
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/productos" className="btn-primary flex justify-center items-center">
+              Conocer Nuestro Catálogo
+            </Link>
+            <a href="https://wa.me/584246606287" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white hover:bg-[#1ebe5d] font-bold uppercase tracking-wider px-8 py-4 rounded transition-all shadow-lg flex justify-center items-center gap-2">
+              <MessageCircle className="w-5 h-5" /> Asesoría Directa
+            </a>
+          </div>
         </div>
       </section>
 
