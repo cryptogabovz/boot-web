@@ -14,7 +14,7 @@ export default function Layout() {
               <img 
                 src="/img/LOGO-BOOST-SOLUTION-0-2048x830 (2).png" 
                 alt="Boots Solution Logo" 
-                className="h-8 md:h-10 object-contain"
+                className="h-12 md:h-16 object-contain"
               />
             </Link>
           </div>
@@ -88,7 +88,7 @@ export default function Layout() {
             <img 
               src="/img/LOGO-BOOST-SOLUTION-0-2048x830 (2).png" 
               alt="Boots Solution Logo" 
-              className="h-10 object-contain self-start grayscale hover:grayscale-0 transition-all"
+              className="h-16 md:h-20 object-contain self-start grayscale hover:grayscale-0 transition-all"
               style={{ filter: 'brightness(0) invert(1)' }}
             />
             <p className="text-sm text-gray-400 max-w-md">

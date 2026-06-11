@@ -5,37 +5,35 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full min-h-[90vh] flex flex-col justify-center overflow-hidden bg-gradient-to-br from-white to-blue-50 pt-24 pb-12">
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="flex flex-col items-start gap-8 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-white/50 backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse"></span>
-              <span className="text-[10px] uppercase tracking-widest text-gray-600 font-bold">Sistemas de Protección Avanzada 2026</span>
-            </div>
-            <h1 className="font-bold text-3xl sm:text-4xl md:text-6xl text-gray-900 tracking-tight leading-tight uppercase font-[Montserrat]">
-              Excelencia en <br/>
+      <section className="relative w-full min-h-[90vh] flex flex-col justify-center overflow-hidden bg-gradient-to-br from-white to-blue-50 pt-16 md:pt-24 pb-8 md:pb-12">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
+          {/* Texto Hero */}
+          <div className="flex flex-col items-center text-center md:items-start md:text-left gap-4 md:gap-8 max-w-2xl order-2 md:order-1">
+            <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-900 tracking-tight leading-tight uppercase font-[Montserrat]">
+              Fabricantes de Equipos de <br/>
               <span className="text-accent-blue">Seguridad Industrial</span>
             </h1>
-            <p className="text-lg text-gray-600 max-w-lg">
+            <p className="text-sm md:text-lg text-gray-600 max-w-lg">
               Fabricantes e Importadores de Calzado e Indumentaria de Alta Resistencia. Diseñados para profesionales que exigen el máximo rendimiento.
             </p>
-            <div className="flex flex-wrap gap-4 mt-4">
-              <Link to="/productos" className="bg-accent-blue text-white hover:bg-blue-700 font-semibold text-sm uppercase px-8 py-4 rounded transition-all duration-300 shadow-lg shadow-accent-blue/30 flex items-center gap-2">
+            <div className="flex flex-wrap gap-4 mt-2 justify-center md:justify-start">
+              <Link to="/productos" className="bg-accent-blue text-white hover:bg-blue-700 font-semibold text-sm uppercase px-6 py-3 md:px-8 md:py-4 rounded transition-all duration-300 shadow-lg shadow-accent-blue/30 flex items-center gap-2">
                 Ver Catálogo
               </Link>
-              <Link to="/contacto" className="bg-accent-green text-white hover:bg-green-700 font-semibold text-sm uppercase px-8 py-4 rounded transition-all duration-300 shadow-lg shadow-accent-green/30 flex items-center gap-2">
+              <Link to="/contacto" className="bg-accent-green text-white hover:bg-green-700 font-semibold text-sm uppercase px-6 py-3 md:px-8 md:py-4 rounded transition-all duration-300 shadow-lg shadow-accent-green/30 flex items-center gap-2">
                 Solicitar Cotización
               </Link>
             </div>
           </div>
           
-          <div className="relative mt-12 md:mt-0 flex justify-center md:justify-end h-full min-h-[500px] items-center">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-blue-100 rounded-full blur-[100px] -z-10"></div>
-            <div className="relative w-full max-w-[600px] float-anim mt-10 md:mt-0">
+          {/* Imagen Hero */}
+          <div className="relative -mt-4 md:mt-0 flex justify-center md:justify-end h-full min-h-[250px] md:min-h-[500px] items-center order-1 md:order-2">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-blue-100 rounded-full blur-[80px] md:blur-[100px] -z-10"></div>
+            <div className="relative w-full max-w-[500px] md:max-w-[600px] float-anim">
               <img 
                 src="/img/bota boot deconstuida.png" 
                 alt="Zapato Deportivo CR 2910 Boots Solution" 
-                className="w-full h-auto object-contain drop-shadow-2xl z-20 relative scale-105"
+                className="w-[85%] md:w-full mx-auto h-auto object-contain drop-shadow-2xl z-20 relative scale-100 md:scale-105"
               />
               
               {/* Pequeñas Tarjetas Interactivas de Características (Escritorio) */}
