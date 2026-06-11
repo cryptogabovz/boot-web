@@ -38,42 +38,59 @@ export default function Home() {
                 className="w-full h-auto object-contain drop-shadow-2xl z-20 relative scale-105"
               />
               
-              {/* Pequeñas Tarjetas Interactivas de Características */}
-              
-              {/* Capellada */}
-              <div className="absolute top-[5%] left-[2%] md:left-[0%] lg:left-[-10%] xl:left-[-15%] z-30 glass-panel p-2.5 border-l-2 border-accent-blue rounded shadow-md max-w-[140px] bg-white/95 backdrop-blur hidden md:block">
-                <div className="absolute top-1/2 left-full w-10 md:w-16 lg:w-24 xl:w-32 border-t border-dashed border-accent-blue opacity-50">
-                  <div className="absolute -right-1 -top-1 w-2 h-2 bg-accent-blue rounded-full"></div>
+              {/* Pequeñas Tarjetas Interactivas de Características (Escritorio) */}
+              <div className="hidden md:block">
+                {/* Capellada */}
+                <div className="absolute top-[5%] left-[2%] md:left-[0%] lg:left-[-10%] xl:left-[-15%] z-30 glass-panel p-2.5 border-l-2 border-accent-blue rounded shadow-md max-w-[140px] bg-white/95 backdrop-blur">
+                  <div className="absolute top-1/2 left-full w-10 md:w-16 lg:w-24 xl:w-32 border-t border-dashed border-accent-blue opacity-50">
+                    <div className="absolute -right-1 -top-1 w-2 h-2 bg-accent-blue rounded-full"></div>
+                  </div>
+                  <h3 className="font-bold text-[11px] text-gray-800 mb-0.5 leading-tight">Capellada Sintética</h3>
+                  <p className="text-[9px] text-gray-600 leading-tight">Malla textil ligera y flexible para un ajuste libre y seguro.</p>
                 </div>
-                <h3 className="font-bold text-[11px] text-gray-800 mb-0.5 leading-tight">Capellada Sintética</h3>
-                <p className="text-[9px] text-gray-600 leading-tight">Malla textil ligera y flexible para un ajuste libre y seguro.</p>
+
+                {/* Puntera (Movida a la izquierda) */}
+                <div className="absolute top-[35%] left-[0%] md:left-[-2%] lg:left-[-12%] xl:left-[-18%] z-30 glass-panel p-2.5 border-l-2 border-accent-blue rounded shadow-md max-w-[140px] bg-white/95 backdrop-blur">
+                  <div className="absolute top-1/2 left-full w-6 md:w-12 lg:w-16 xl:w-24 border-t border-dashed border-accent-blue opacity-50">
+                    <div className="absolute -right-1 -top-1 w-2 h-2 bg-accent-blue rounded-full"></div>
+                  </div>
+                  <h3 className="font-bold text-[11px] text-gray-800 mb-0.5 leading-tight">Puntera 200 J</h3>
+                  <p className="text-[9px] text-gray-600 leading-tight">Acero o policarbonato con resistencia a compresión 15 KN.</p>
+                </div>
+
+                {/* Plantilla Kevlar (Apuntando a la parte beige) */}
+                <div className="absolute top-[58%] right-[2%] md:right-[0%] lg:right-[-12%] xl:right-[-20%] z-30 glass-panel p-2.5 border-r-2 border-accent-green rounded shadow-md max-w-[140px] bg-white/95 backdrop-blur">
+                  <div className="absolute top-1/2 right-full w-10 md:w-16 lg:w-24 xl:w-32 border-t border-dashed border-accent-green opacity-50">
+                    <div className="absolute -left-1 -top-1 w-2 h-2 bg-accent-green rounded-full"></div>
+                  </div>
+                  <h3 className="font-bold text-[11px] text-gray-800 mb-0.5 leading-tight">Plantilla Kevlar</h3>
+                  <p className="text-[9px] text-gray-600 leading-tight">Lámina antiperforante (3.4mm) beige para protección extrema.</p>
+                </div>
+
+                {/* Suela */}
+                <div className="absolute bottom-[2%] right-[0%] md:right-[-2%] lg:right-[-12%] xl:right-[-18%] z-30 glass-panel p-2.5 border-r-2 border-accent-green rounded shadow-md max-w-[140px] bg-white/95 backdrop-blur">
+                  <div className="absolute top-1/2 right-full w-6 md:w-12 lg:w-16 xl:w-24 border-t border-dashed border-accent-green opacity-50">
+                    <div className="absolute -left-1 -top-1 w-2 h-2 bg-accent-green rounded-full"></div>
+                  </div>
+                  <h3 className="font-bold text-[11px] text-gray-800 mb-0.5 leading-tight">Suela Caucho/EVA</h3>
+                  <p className="text-[9px] text-gray-600 leading-tight">Antideslizante con cojín de aire. Máxima tracción industrial.</p>
+                </div>
               </div>
 
-              {/* Puntera (Movida a la izquierda) */}
-              <div className="absolute top-[35%] left-[0%] md:left-[-2%] lg:left-[-12%] xl:left-[-18%] z-30 glass-panel p-2.5 border-l-2 border-accent-blue rounded shadow-md max-w-[140px] bg-white/95 backdrop-blur hidden md:block">
-                <div className="absolute top-1/2 left-full w-6 md:w-12 lg:w-16 xl:w-24 border-t border-dashed border-accent-blue opacity-50">
-                  <div className="absolute -right-1 -top-1 w-2 h-2 bg-accent-blue rounded-full"></div>
-                </div>
-                <h3 className="font-bold text-[11px] text-gray-800 mb-0.5 leading-tight">Puntera 200 J</h3>
-                <p className="text-[9px] text-gray-600 leading-tight">Acero o policarbonato con resistencia a compresión 15 KN.</p>
-              </div>
-
-              {/* Plantilla Kevlar (Apuntando a la parte beige) */}
-              <div className="absolute top-[58%] right-[2%] md:right-[0%] lg:right-[-12%] xl:right-[-20%] z-30 glass-panel p-2.5 border-r-2 border-accent-green rounded shadow-md max-w-[140px] bg-white/95 backdrop-blur hidden md:block">
-                <div className="absolute top-1/2 right-full w-10 md:w-16 lg:w-24 xl:w-32 border-t border-dashed border-accent-green opacity-50">
-                  <div className="absolute -left-1 -top-1 w-2 h-2 bg-accent-green rounded-full"></div>
-                </div>
-                <h3 className="font-bold text-[11px] text-gray-800 mb-0.5 leading-tight">Plantilla Kevlar</h3>
-                <p className="text-[9px] text-gray-600 leading-tight">Lámina antiperforante (3.4mm) beige para protección extrema.</p>
-              </div>
-
-              {/* Suela */}
-              <div className="absolute bottom-[2%] right-[0%] md:right-[-2%] lg:right-[-12%] xl:right-[-18%] z-30 glass-panel p-2.5 border-r-2 border-accent-green rounded shadow-md max-w-[140px] bg-white/95 backdrop-blur hidden md:block">
-                <div className="absolute top-1/2 right-full w-6 md:w-12 lg:w-16 xl:w-24 border-t border-dashed border-accent-green opacity-50">
-                  <div className="absolute -left-1 -top-1 w-2 h-2 bg-accent-green rounded-full"></div>
-                </div>
-                <h3 className="font-bold text-[11px] text-gray-800 mb-0.5 leading-tight">Suela Caucho/EVA</h3>
-                <p className="text-[9px] text-gray-600 leading-tight">Antideslizante con cojín de aire. Máxima tracción industrial.</p>
+              {/* Pequeñas Etiquetas Simplificadas (Móvil) */}
+              <div className="block md:hidden">
+                <span className="absolute top-[22%] left-[4%] z-30 bg-accent-blue/90 text-white text-[8px] font-bold px-2.5 py-1 rounded-full shadow-md uppercase tracking-wider">
+                  Capellada Flexible
+                </span>
+                <span className="absolute top-[55%] left-[0%] z-30 bg-accent-blue/90 text-white text-[8px] font-bold px-2.5 py-1 rounded-full shadow-md uppercase tracking-wider">
+                  Puntera Acero 200J
+                </span>
+                <span className="absolute top-[62%] right-[4%] z-30 bg-accent-green/90 text-white text-[8px] font-bold px-2.5 py-1 rounded-full shadow-md uppercase tracking-wider">
+                  Plantilla Antiperforante
+                </span>
+                <span className="absolute bottom-[10%] right-[2%] z-30 bg-accent-green/90 text-white text-[8px] font-bold px-2.5 py-1 rounded-full shadow-md uppercase tracking-wider">
+                  Suela Antideslizante
+                </span>
               </div>
             </div>
           </div>
@@ -161,36 +178,43 @@ export default function Home() {
       <section className="py-16 bg-gray-50 border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 md:px-16 text-center">
           <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8 block">Nuestros Productos Cumplen y Superan Normativas Internacionales y Nacionales</span>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center">
-            <div className="h-16 flex items-center justify-center p-2">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-12 md:gap-12 items-center justify-items-center">
+            {/* Fila 1: Redondos / Cuadrados */}
+            <div className="h-14 md:h-20 w-full flex items-center justify-center">
               <img src="/img/certificaciones/norma iso logo.png" alt="Normas ISO" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
             </div>
-            <div className="h-16 flex items-center justify-center p-2">
-              <img src="/img/certificaciones/Ansi-Logo-Vector.svg-.png" alt="ANSI" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
-            </div>
-            <div className="h-12 flex items-center justify-center p-2">
-              <img src="/img/certificaciones/US-OSHA-Logo.svg.png" alt="OSHA" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
-            </div>
-            <div className="h-14 flex items-center justify-center p-2">
+            <div className="h-12 md:h-16 w-full flex items-center justify-center">
               <img src="/img/certificaciones/Conformité_Européenne_(logo).svg.png" alt="CE" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
             </div>
-            <div className="h-16 flex items-center justify-center p-2">
+            
+            {/* Fila 2: Anchos */}
+            <div className="h-8 md:h-12 w-full flex items-center justify-center">
+              <img src="/img/certificaciones/US-OSHA-Logo.svg.png" alt="OSHA" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
+            </div>
+            <div className="h-12 md:h-16 w-full flex items-center justify-center">
               <img src="/img/certificaciones/astm logo.png" alt="ASTM" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
             </div>
-            <div className="h-16 flex items-center justify-center p-2">
-              <img src="/img/certificaciones/covenin.png" alt="COVENIN" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
-            </div>
-            <div className="h-14 flex items-center justify-center p-2">
+
+            {/* Fila 3: Anchos */}
+            <div className="h-7 md:h-10 w-full flex items-center justify-center">
               <img src="/img/certificaciones/icontec.png" alt="ICONTEC" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
             </div>
-            <div className="h-16 flex items-center justify-center p-2">
+            <div className="h-10 md:h-14 w-full flex items-center justify-center">
+              <img src="/img/certificaciones/Ansi-Logo-Vector.svg-.png" alt="ANSI" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
+            </div>
+
+            {/* Fila 4: Redondos / Cuadrados */}
+            <div className="h-16 md:h-20 w-full flex items-center justify-center">
+              <img src="/img/certificaciones/covenin.png" alt="COVENIN" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
+            </div>
+            <div className="h-16 md:h-20 w-full flex items-center justify-center">
               <img src="/img/certificaciones/nfpa-international-logo-black-and-white-768x768.webp" alt="NFPA" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
             </div>
           </div>
         </div>
       </section>
 
-{/* Technology Section with Exploded View */}
+      {/* Technology Section with Exploded View */}
       <section className="py-32 relative w-full overflow-hidden bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 md:px-16 relative z-10">
           <div className="text-center mb-24">
@@ -202,12 +226,12 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="relative min-h-[600px] flex items-center justify-center">
-            <div className="relative w-full max-w-4xl">
+          <div className="relative min-h-[600px] flex flex-col md:flex-row items-center justify-center">
+            <div className="relative w-full max-w-4xl flex justify-center items-center">
               <img 
                 src="/img/659580e5240843c33a8e322e_BOTA DESARMADA copia.png" 
                 alt="Bota Desarmada Boots Solution" 
-                className="w-full h-auto object-contain relative z-20 drop-shadow-xl"
+                className="w-[115%] md:w-full h-auto object-contain relative z-20 drop-shadow-xl scale-110 md:scale-100"
               />
               
               {/* Feature Cards for Exploded View */}
@@ -255,29 +279,25 @@ export default function Home() {
                 <h4 className="text-sm font-bold text-gray-800 mb-1">Suela Antideslizante</h4>
                 <p className="text-xs text-gray-600">Base exterior de alto agarre con labrado profundo, autolimpiante y altamente resistente a hidrocarburos y flexión constante.</p>
               </div>
-            </div>
-            
-            {/* Mobile-Only Features Grid (below the image on mobile) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 md:hidden relative z-30">
-              <div className="glass-panel p-5 border-l-4 border-accent-green rounded shadow bg-white">
-                <span className="text-[10px] uppercase tracking-wider text-accent-green block mb-1 font-bold">Protección Exterior</span>
-                <h4 className="text-sm font-bold text-gray-800 mb-1">Cubierta de Alta Resistencia</h4>
-                <p className="text-xs text-gray-600">Capa protectora externa contra salpicaduras, desgaste y rasgaduras. Se adapta a múltiples tecnologías de confección.</p>
-              </div>
-              <div className="glass-panel p-5 border-l-4 border-accent-blue rounded shadow bg-white">
-                <span className="text-[10px] uppercase tracking-wider text-accent-blue block mb-1 font-bold">Seguridad Activa</span>
-                <h4 className="text-sm font-bold text-gray-800 mb-1">Plantilla Antiperforación</h4>
-                <p className="text-xs text-gray-600">Capa interna flexible diseñada para evitar la penetración de clavos u otros objetos punzantes en la planta del pie.</p>
-              </div>
-              <div className="glass-panel p-5 border-r-4 border-accent-blue rounded shadow bg-white text-right">
-                <span className="text-[10px] uppercase tracking-wider text-accent-blue block mb-1 font-bold">Certificación</span>
-                <h4 className="text-sm font-bold text-gray-800 mb-1">Puntera de Seguridad</h4>
-                <p className="text-xs text-gray-600">Casquillo frontal diseñado para absorber impactos de alta energía y compresión severa bajo normas internacionales.</p>
-              </div>
-              <div className="glass-panel p-5 border-r-4 border-accent-green rounded shadow bg-white text-right">
-                <span className="text-[10px] uppercase tracking-wider text-accent-green block mb-1 font-bold">Agarre Industrial</span>
-                <h4 className="text-sm font-bold text-gray-800 mb-1">Suela Antideslizante</h4>
-                <p className="text-xs text-gray-600">Base exterior de alto agarre con labrado profundo, autolimpiante y altamente resistente a hidrocarburos y flexión constante.</p>
+              
+              {/* Mobile-Only Labels Overlayed on Image */}
+              <div className="block md:hidden">
+                {/* Cubierta */}
+                <span className="absolute top-[12%] left-[10%] z-30 bg-accent-green/90 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow-md uppercase tracking-wider">
+                  Cubierta Protectora
+                </span>
+                {/* Puntera */}
+                <span className="absolute top-[44%] right-[15%] z-30 bg-accent-blue/90 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow-md uppercase tracking-wider">
+                  Puntera de Seguridad
+                </span>
+                {/* Plantilla */}
+                <span className="absolute top-[72%] left-[12%] z-30 bg-accent-blue/90 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow-md uppercase tracking-wider">
+                  Plantilla Antiperforación
+                </span>
+                {/* Suela */}
+                <span className="absolute bottom-[18%] right-[12%] z-30 bg-accent-green/90 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow-md uppercase tracking-wider">
+                  Suela Antideslizante
+                </span>
               </div>
             </div>
           </div>

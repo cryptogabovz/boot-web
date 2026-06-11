@@ -86,28 +86,35 @@ export default function About() {
           <div className="border-t border-gray-200 pt-16">
             <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8 block">Certificaciones & Homologaciones Internacionales y Nacionales</span>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center">
-              <div className="h-16 flex items-center justify-center p-2">
+              {/* Fila 1: Redondos / Cuadrados */}
+              <div className="h-14 flex items-center justify-center p-2">
                 <img src="/img/certificaciones/norma iso logo.png" alt="Normas ISO" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
               </div>
-              <div className="h-16 flex items-center justify-center p-2">
-                <img src="/img/certificaciones/Ansi-Logo-Vector.svg-.png" alt="ANSI" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
-              </div>
               <div className="h-12 flex items-center justify-center p-2">
-                <img src="/img/certificaciones/US-OSHA-Logo.svg.png" alt="OSHA" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
-              </div>
-              <div className="h-14 flex items-center justify-center p-2">
                 <img src="/img/certificaciones/Conformité_Européenne_(logo).svg.png" alt="CE" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
               </div>
-              <div className="h-16 flex items-center justify-center p-2">
+              
+              {/* Fila 2: Anchos */}
+              <div className="h-7 flex items-center justify-center p-2">
+                <img src="/img/certificaciones/US-OSHA-Logo.svg.png" alt="OSHA" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
+              </div>
+              <div className="h-9 flex items-center justify-center p-2">
                 <img src="/img/certificaciones/astm logo.png" alt="ASTM" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
               </div>
-              <div className="h-16 flex items-center justify-center p-2">
+
+              {/* Fila 3: Anchos */}
+              <div className="h-8 flex items-center justify-center p-2">
+                <img src="/img/certificaciones/icontec.png" alt="ICONTEC" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
+              </div>
+              <div className="h-9 flex items-center justify-center p-2">
+                <img src="/img/certificaciones/Ansi-Logo-Vector.svg-.png" alt="ANSI" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
+              </div>
+
+              {/* Fila 4: Redondos / Cuadrados */}
+              <div className="h-12 flex items-center justify-center p-2">
                 <img src="/img/certificaciones/covenin.png" alt="COVENIN" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
               </div>
               <div className="h-14 flex items-center justify-center p-2">
-                <img src="/img/certificaciones/icontec.png" alt="ICONTEC" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
-              </div>
-              <div className="h-16 flex items-center justify-center p-2">
                 <img src="/img/certificaciones/nfpa-international-logo-black-and-white-768x768.webp" alt="NFPA" className="max-h-full max-w-full object-contain grayscale contrast-[1.5] brightness-[0.4] opacity-80 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300" />
               </div>
             </div>
